@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Tampilan tombol & input agar rapi */
+        select, input[type="number"], button {
+            padding: 4px 8px;
+            margin: 2px;
+            font-size: 13px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+<body style="background-color: #ffd1dc;">
+    <h2>Katalog Phone Strap Shezia</h2>
+    <hr>
+    <p>Pilih warna dan jumlah, lalu klik beli untuk memasukkan ke keranjang:</p>
+
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <!-- JUDUL KOLOM -->
+        <tr bgcolor="#cccccc" align="center">
+            <th>No</th>
+            <th>Foto Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+            <th>Pilihan Warna & Jumlah</th>
+            <th>Aksi</th>
+        </tr>
+
+        <!-- PRODUK 1 -->
+        <tr align="center">
+            <td>1</td>
+            <td>
+                <a href="aesthetic phone strap.jpg" target="_blank">
+                    <img src="aesthetic phone strap.jpg" width="70" height="70" alt="Phone Strap 1">
+                </a>
+            </td>
+            <td>Phone Strap Custom Beads</td>
+            <td>Rp 15.000</td>
+            <td>
+                <!-- Pilihan Warna -->
+                <select id="warna1">
+                    <option value="Pink">Pink</option>
+                    <option value="Biru">Biru</option>
+                    <option value="Ungu">Ungu</option>
+                    <option value="Putih">Putih</option>
+                </select>
+                <!-- Pilihan Jumlah -->
+                <input type="number" id="jumlah1" value="1" min="1" style="width: 50px;">
+            </td>
+            <td>
+                <button onclick="tambahKeKeranjang('Phone Strap Custom Beads', 'warna1', 'jumlah1', 15000)">+ Beli</button>
+            </td>
+        </tr>
+
+        <!-- PRODUK 2 -->
+        <tr align="center">
+            <td>2</td>
+            <td>
+                <a href="decent mobile charm.jpg" target="_blank">
+                    <img src="decent mobile charm.jpg" width="70" height="70" alt="Phone Strap 2">
+                </a>
+            </td>
+            <td>Phone Strap Pastel Flower</td>
+            <td>Rp 18.000</td>
+            <td>
+                <select id="warna2">
+                    <option value="Pink Pastel">Pink Pastel</option>
+                    <option value="Kuning">Kuning</option>
+                    <option value="Hijau Mint">Hijau Mint</option>
+                </select>
+                <input type="number" id="jumlah2" value="1" min="1" style="width: 50px;">
+            </td>
+            <td>
+                <button onclick="tambahKeKeranjang('Phone Strap Pastel Flower', 'warna2', 'jumlah2', 18000)">+ Beli</button>
+            </td>
+        </tr>
+
+        <!-- PRODUK 3 -->
+        <tr align="center">
+            <td>3</td>
+            <td>
+                <a href="klipkin.jpg" target="_blank">
+                    <img src="klipkin.jpg" width="70" height="70" alt="Phone Strap 3">
+                </a>
+            </td>
+            <td>Phone Strap Pearl Crystal</td>
+            <td>Rp 15.000</td>
+            <td>
+                <select id="warna3">
+                    <option value="Putih Mutiara">Putih Mutiara</option>
+                    <option value="Pink Pearl">Pink Pearl</option>
+                </select>
+                <input type="number" id="jumlah3" value="1" min="1" style="width: 50px;">
+            </td>
+            <td>
+                <button onclick="tambahKeKeranjang('Phone Strap Pearl Crystal', 'warna3', 'jumlah3', 20000)">+ Beli</button>
+            </td>
+        </tr>
+
+ <!-- PRODUK 4 -->
+        <tr align="center">
+            <td>3</td>
+            <td>
+                <a href="whatsapp1.jpeg" target="_blank">
+    <img src="whatsapp1.jpeg" width="70" height="70" alt="Phone Strap">
+                </a>
+            </td>
+            <td>Phone Strap Pearl Crystal</td>
+            <td>Rp 20.000</td>
+            <td>
+                <select id="warna3">
+                    <option value="Putih Mutiara">Putih Mutiara</option>
+                    <option value="Pink Pearl">Pink Pearl</option>
+                </select>
+                <input type="number" id="jumlah3" value="1" min="1" style="width: 50px;">
+            </td>
+            <td>
+                <button onclick="tambahKeKeranjang('Phone Strap Pearl Crystal', 'warna3', 'jumlah3', 20000)">+ Beli</button>
+            </td>
+        </tr>
+<!-- PRODUK 5 -->
+        <tr align="center">
+            <td>3</td>
+            <td>
+                <a href="phone strap lucu karakter _mix premi luxury.jpg" target="_blank">
+    <img src="phone strap lucu karakter _mix premi luxury.jpg" width="70" height="70" alt="Phone Strap">
+                </a>
+            </td>
+            <td>Phone Strap Karakter lucul</td>
+            <td>Rp 20.000</td>
+            <td>
+                <select id="warna3">
+                    <option value="snoopy">snoopy</option>
+                    <option value="kuromi">kuromi</option>
+                     <option value="pompompurin">pompompurin</option>
+                     <option value="melody">melody</option>
+                     <option value="cinamoroll">cinamoroll</option>
+                                     </select>
+s
+               <input type="number" id="jumlah3" value="1" min="1" style="width: 50px;">
+            </td>
+            <td>
+                <!-- Perhatikan tombol ini memanggil 'jumlah3' -->
+                <button onclick="tambahKeKeranjang('Phone Strap Karakter Lucu', 'warna3', 'jumlah3', 20000)">+ Beli</button>
+            </td>
+        </tr>
+<!-- PRODUK 6 (CUSTOM NAMA) -->
+        <tr align="center">
+            <td>5</td>
+            <td>
+                <a href="custom.jpg" target="_blank">
+                    <img src="custom.jpg" width="70" height="70" alt="Phone Strap Custom">
+                </a>
+            </td>
+            <td>Phone Strap Custom Nama</td>
+            <td>Rp 25.000</td>
+            <td>
+                <!-- Pilihan Warna -->
+                <select id="warna5">
+                    <option value="Pink">Pink</option>
+                    <option value="Putih">Putih</option>
+                    <option value="ungu">ungu</option>
+                    <option value="oren">oren</option>
+
+
+                </select>
+                
+                <!-- Kotak untuk mengetik nama custom -->
+                <br>
+                <input type="text" id="custom5" placeholder="Ketik nama custom..." style="width: 120px; margin-top: 4px;">
+                
+                <!-- Jumlah barang -->
+                <br>
+                <input type="number" id="jumlah5" value="1" min="1" style="width: 50px; margin-top: 4px;">
+            </td>
+            <td>
+                <!-- Tombol Beli / Pesan -->
+                <button onclick="tambahKeKeranjang('Phone Strap Custom Nama', 'warna5', 'jumlah5', 25000, 'custom5')">+ Beli</button>
+            </td>
+        </tr>
+
+
+
+
+
+    </table>
+
+    <!-- (Tabel produk-produk kamu dari atas sampai bawah ada di sini) -->
+    </table>
+
+    <!-- TARUH KODINGAN SCRIPT JAVASCRIPT TADI TEPAT DI SINI (BAGIAN BAWAH) -->
+    <script>
+    function tambahKeKeranjang(namaProduk, idWarna, idJumlah, hargaSatuan) {
+        var warna = document.getElementById(idWarna).value;
+        var jumlah = document.getElementById(idJumlah).value;
+        var totalHarga = hargaSatuan * jumlah;
+        
+        alert("🛒 Sukses Masuk Keranjang!\n\n" +
+              "Produk: " + namaProduk + "\n" +
+              "Warna: " + warna + "\n" +
+              "Jumlah: " + jumlah + " pcs\n" +
+              "Total: Rp " + totalHarga.toLocaleString('id-ID'));
+    }
+    </script>
+
+</body>
+</html>
